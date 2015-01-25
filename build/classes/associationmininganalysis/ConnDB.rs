@@ -1,0 +1,2 @@
+associationmininganalysis.SQLDB
+associationmininganalysis.ConnDB

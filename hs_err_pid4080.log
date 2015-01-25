@@ -1,0 +1,222 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x6d924230, pid=4080, tid=1924
+#
+# JRE version: 6.0_17-b04
+# Java VM: Java HotSpot(TM) Client VM (14.3-b01 mixed mode, sharing windows-x86 )
+# Problematic frame:
+# V  [jvm.dll+0x74230]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00d09000):  JavaThread "main" [_thread_in_vm, id=1924, stack(0x00370000,0x003c0000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x81920d90
+
+Registers:
+EAX=0x81920d90, EBX=0x0000003d, ECX=0x00d0d908, EDX=0x81920d90
+ESP=0x003bf254, EBP=0x003bf264, ESI=0x81920d91, EDI=0x0000000d
+EIP=0x6d924230, EFLAGS=0x00010287
+
+Top of Stack: (sp=0x003bf254)
+0x003bf254:   01921bf8 00000000 00d0be80 00d0d530
+0x003bf264:   003bf278 6d9256f7 01921bf8 00d06358
+0x003bf274:   00d0be80 003bf3a4 6d924d7b 01921bf8
+0x003bf284:   00d095ec 00d09000 00000000 01910048
+0x003bf294:   01910160 03d7ecd8 01910440 2c2fcec8
+0x003bf2a4:   003bf238 003bf2b4 003bf360 7705d75d
+0x003bf2b4:   000cae8b fffffffe 7709231e 770921b9
+0x003bf2c4:   0000000c 0000000c 00000000 00000000 
+
+Instructions: (pc=0x6d924230)
+0x6d924220:   d8 7e 3a 8b 45 fc 8b 08 8b 14 b9 8b c2 8d 70 01
+0x6d924230:   8a 08 40 84 c9 75 f9 2b c6 3b d8 73 02 8b c3 50 
+
+
+Stack: [0x00370000,0x003c0000],  sp=0x003bf254,  free space=316k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x74230]
+V  [jvm.dll+0x756f7]
+V  [jvm.dll+0x74d7b]
+V  [jvm.dll+0x1b6326]
+V  [jvm.dll+0x1b69be]
+V  [jvm.dll+0x1b6d75]
+V  [jvm.dll+0x1b6dbb]
+V  [jvm.dll+0x113433]
+V  [jvm.dll+0x11b850]
+V  [jvm.dll+0x11b989]
+C  [java.dll+0x180a]
+j  java.lang.ClassLoader.findBootstrapClass(Ljava/lang/String;)Ljava/lang/Class;+0
+j  java.lang.ClassLoader.findBootstrapClass0(Ljava/lang/String;)Ljava/lang/Class;+19
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+32
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+23
+j  sun.misc.Launcher$AppClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+41
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;)Ljava/lang/Class;+3
+j  java.util.ResourceBundle$RBClassLoader.loadClass(Ljava/lang/String;)Ljava/lang/Class;+10
+j  java.util.ResourceBundle$Control.newBundle(Ljava/lang/String;Ljava/util/Locale;Ljava/lang/String;Ljava/lang/ClassLoader;Z)Ljava/util/ResourceBundle;+24
+j  java.util.ResourceBundle.loadBundle(Ljava/util/ResourceBundle$CacheKey;Ljava/util/List;Ljava/util/ResourceBundle$Control;Z)Ljava/util/ResourceBundle;+83
+j  java.util.ResourceBundle.findBundle(Ljava/util/ResourceBundle$CacheKey;Ljava/util/List;Ljava/util/List;ILjava/util/ResourceBundle$Control;Ljava/util/ResourceBundle;)Ljava/util/ResourceBundle;+331
+j  java.util.ResourceBundle.getBundleImpl(Ljava/lang/String;Ljava/util/Locale;Ljava/lang/ClassLoader;Ljava/util/ResourceBundle$Control;)Ljava/util/ResourceBundle;+187
+j  java.util.ResourceBundle.getBundle(Ljava/lang/String;Ljava/util/Locale;Ljava/util/ResourceBundle$Control;)Ljava/util/ResourceBundle;+6
+j  javax.swing.UIDefaults.getResourceCache(Ljava/util/Locale;)Ljava/util/Map;+70
+j  javax.swing.UIDefaults.getFromResourceBundle(Ljava/lang/Object;Ljava/util/Locale;)Ljava/lang/Object;+50
+j  javax.swing.UIDefaults.get(Ljava/lang/Object;)Ljava/lang/Object;+17
+j  javax.swing.MultiUIDefaults.get(Ljava/lang/Object;)Ljava/lang/Object;+39
+j  javax.swing.UIDefaults.getUI(Ljavax/swing/JComponent;)Ljavax/swing/plaf/ComponentUI;+3
+j  javax.swing.UIManager.getUI(Ljavax/swing/JComponent;)Ljavax/swing/plaf/ComponentUI;+33
+j  javax.swing.JPanel.updateUI()V+2
+j  javax.swing.JPanel.<init>(Ljava/awt/LayoutManager;Z)V+24
+j  javax.swing.JPanel.<init>(Z)V+9
+j  javax.swing.JPanel.<init>()V+2
+j  javax.swing.JRootPane.createGlassPane()Ljava/awt/Component;+4
+j  javax.swing.JRootPane.<init>()V+11
+j  javax.swing.JFrame.createRootPane()Ljavax/swing/JRootPane;+4
+j  javax.swing.JFrame.frameInit()V+16
+j  javax.swing.JFrame.<init>()V+20
+j  associationmininganalysis.Test.<init>()V+1
+j  associationmininganalysis.Test.main([Ljava/lang/String;)V+4
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0xecf9c]
+V  [jvm.dll+0x1741d1]
+V  [jvm.dll+0xed01d]
+V  [jvm.dll+0xf5be5]
+V  [jvm.dll+0xfd83d]
+C  [java.exe+0x2155]
+C  [java.exe+0x82ce]
+C  [kernel32.dll+0x51194]
+C  [ntdll.dll+0x5b495]
+C  [ntdll.dll+0x5b468]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  java.lang.ClassLoader.findBootstrapClass(Ljava/lang/String;)Ljava/lang/Class;+0
+j  java.lang.ClassLoader.findBootstrapClass0(Ljava/lang/String;)Ljava/lang/Class;+19
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+32
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+23
+j  sun.misc.Launcher$AppClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+41
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;)Ljava/lang/Class;+3
+j  java.util.ResourceBundle$RBClassLoader.loadClass(Ljava/lang/String;)Ljava/lang/Class;+10
+j  java.util.ResourceBundle$Control.newBundle(Ljava/lang/String;Ljava/util/Locale;Ljava/lang/String;Ljava/lang/ClassLoader;Z)Ljava/util/ResourceBundle;+24
+j  java.util.ResourceBundle.loadBundle(Ljava/util/ResourceBundle$CacheKey;Ljava/util/List;Ljava/util/ResourceBundle$Control;Z)Ljava/util/ResourceBundle;+83
+j  java.util.ResourceBundle.findBundle(Ljava/util/ResourceBundle$CacheKey;Ljava/util/List;Ljava/util/List;ILjava/util/ResourceBundle$Control;Ljava/util/ResourceBundle;)Ljava/util/ResourceBundle;+331
+j  java.util.ResourceBundle.getBundleImpl(Ljava/lang/String;Ljava/util/Locale;Ljava/lang/ClassLoader;Ljava/util/ResourceBundle$Control;)Ljava/util/ResourceBundle;+187
+j  java.util.ResourceBundle.getBundle(Ljava/lang/String;Ljava/util/Locale;Ljava/util/ResourceBundle$Control;)Ljava/util/ResourceBundle;+6
+j  javax.swing.UIDefaults.getResourceCache(Ljava/util/Locale;)Ljava/util/Map;+70
+j  javax.swing.UIDefaults.getFromResourceBundle(Ljava/lang/Object;Ljava/util/Locale;)Ljava/lang/Object;+50
+j  javax.swing.UIDefaults.get(Ljava/lang/Object;)Ljava/lang/Object;+17
+j  javax.swing.MultiUIDefaults.get(Ljava/lang/Object;)Ljava/lang/Object;+39
+j  javax.swing.UIDefaults.getUI(Ljavax/swing/JComponent;)Ljavax/swing/plaf/ComponentUI;+3
+j  javax.swing.UIManager.getUI(Ljavax/swing/JComponent;)Ljavax/swing/plaf/ComponentUI;+33
+j  javax.swing.JPanel.updateUI()V+2
+j  javax.swing.JPanel.<init>(Ljava/awt/LayoutManager;Z)V+24
+j  javax.swing.JPanel.<init>(Z)V+9
+j  javax.swing.JPanel.<init>()V+2
+j  javax.swing.JRootPane.createGlassPane()Ljava/awt/Component;+4
+j  javax.swing.JRootPane.<init>()V+11
+j  javax.swing.JFrame.createRootPane()Ljavax/swing/JRootPane;+4
+j  javax.swing.JFrame.frameInit()V+16
+j  javax.swing.JFrame.<init>()V+20
+j  associationmininganalysis.Test.<init>()V+1
+j  associationmininganalysis.Test.main([Ljava/lang/String;)V+4
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x03d7e800 JavaThread "AWT-Windows" daemon [_thread_in_native, id=2140, stack(0x04080000,0x040d0000)]
+  0x03d7e400 JavaThread "AWT-Shutdown" [_thread_blocked, id=2336, stack(0x04030000,0x04080000)]
+  0x03d7b800 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=4044, stack(0x03d10000,0x03d60000)]
+  0x01997000 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=2604, stack(0x03c70000,0x03cc0000)]
+  0x01990400 JavaThread "CompilerThread0" daemon [_thread_blocked, id=544, stack(0x03c20000,0x03c70000)]
+  0x0198fc00 JavaThread "Attach Listener" daemon [_thread_blocked, id=2068, stack(0x03bd0000,0x03c20000)]
+  0x01985400 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=3976, stack(0x03b80000,0x03bd0000)]
+  0x01947400 JavaThread "Finalizer" daemon [_thread_blocked, id=3268, stack(0x03b30000,0x03b80000)]
+  0x01942800 JavaThread "Reference Handler" daemon [_thread_blocked, id=1012, stack(0x03ae0000,0x03b30000)]
+=>0x00d09000 JavaThread "main" [_thread_in_vm, id=1924, stack(0x00370000,0x003c0000)]
+
+Other Threads:
+  0x01941000 VMThread [stack: 0x03a90000,0x03ae0000] [id=1896]
+  0x01998800 WatcherThread [stack: 0x03cc0000,0x03d10000] [id=1696]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 960K, used 649K [0x239f0000, 0x23af0000, 0x23ed0000)
+  eden space 896K,  72% used [0x239f0000, 0x23a927f8, 0x23ad0000)
+  from space 64K,   0% used [0x23ad0000, 0x23ad0000, 0x23ae0000)
+  to   space 64K,   0% used [0x23ae0000, 0x23ae0000, 0x23af0000)
+ tenured generation   total 4096K, used 0K [0x23ed0000, 0x242d0000, 0x279f0000)
+   the space 4096K,   0% used [0x23ed0000, 0x23ed0000, 0x23ed0200, 0x242d0000)
+ compacting perm gen  total 12288K, used 61K [0x279f0000, 0x285f0000, 0x2b9f0000)
+   the space 12288K,   0% used [0x279f0000, 0x279ff510, 0x279ff600, 0x285f0000)
+    ro space 8192K,  67% used [0x2b9f0000, 0x2bf58230, 0x2bf58400, 0x2c1f0000)
+    rw space 12288K,  54% used [0x2c1f0000, 0x2c86d678, 0x2c86d800, 0x2cdf0000)
+
+Dynamic libraries:
+0x00400000 - 0x00424000 	C:\Program Files\Java\jdk1.6.0_17\bin\java.exe
+0x77040000 - 0x7717c000 	C:\Windows\SYSTEM32\ntdll.dll
+0x76c80000 - 0x76d54000 	C:\Windows\system32\kernel32.dll
+0x75260000 - 0x752aa000 	C:\Windows\system32\KERNELBASE.dll
+0x76e40000 - 0x76ee0000 	C:\Windows\system32\ADVAPI32.dll
+0x76560000 - 0x7660c000 	C:\Windows\system32\msvcrt.dll
+0x76950000 - 0x76969000 	C:\Windows\SYSTEM32\sechost.dll
+0x75490000 - 0x75531000 	C:\Windows\system32\RPCRT4.dll
+0x7c340000 - 0x7c396000 	C:\Program Files\Java\jdk1.6.0_17\jre\bin\msvcr71.dll
+0x6d8b0000 - 0x6db3b000 	C:\Program Files\Java\jdk1.6.0_17\jre\bin\client\jvm.dll
+0x76300000 - 0x763c9000 	C:\Windows\system32\USER32.dll
+0x76c00000 - 0x76c4e000 	C:\Windows\system32\GDI32.dll
+0x771d0000 - 0x771da000 	C:\Windows\system32\LPK.dll
+0x76460000 - 0x764fd000 	C:\Windows\system32\USP10.dll
+0x73560000 - 0x73592000 	C:\Windows\system32\WINMM.dll
+0x76a40000 - 0x76a5f000 	C:\Windows\system32\IMM32.DLL
+0x76970000 - 0x76a3c000 	C:\Windows\system32\MSCTF.dll
+0x750c0000 - 0x7510b000 	C:\Windows\system32\apphelp.dll
+0x6d860000 - 0x6d86c000 	C:\Program Files\Java\jdk1.6.0_17\jre\bin\verify.dll
+0x6d3e0000 - 0x6d3ff000 	C:\Program Files\Java\jdk1.6.0_17\jre\bin\java.dll
+0x6d340000 - 0x6d348000 	C:\Program Files\Java\jdk1.6.0_17\jre\bin\hpi.dll
+0x75540000 - 0x75545000 	C:\Windows\system32\PSAPI.DLL
+0x6d8a0000 - 0x6d8af000 	C:\Program Files\Java\jdk1.6.0_17\jre\bin\zip.dll
+0x6d0b0000 - 0x6d1fa000 	C:\Program Files\Java\jdk1.6.0_17\jre\bin\awt.dll
+0x70480000 - 0x704d1000 	C:\Windows\system32\WINSPOOL.DRV
+0x76ee0000 - 0x7703c000 	C:\Windows\system32\ole32.dll
+0x740c0000 - 0x7425e000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16661_none_420fe3fa2b8113bd\comctl32.dll
+0x75550000 - 0x755a7000 	C:\Windows\system32\SHLWAPI.dll
+0x73c60000 - 0x73c73000 	C:\Windows\system32\DWMAPI.DLL
+0x73f80000 - 0x73fc0000 	C:\Windows\system32\uxtheme.dll
+0x6d2e0000 - 0x6d334000 	C:\Program Files\Java\jdk1.6.0_17\jre\bin\fontmanager.dll
+0x75110000 - 0x7511c000 	C:\Windows\system32\CRYPTBASE.dll
+0x756b0000 - 0x762f9000 	C:\Windows\system32\shell32.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: associationmininganalysis.Test
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.6.0_17
+PATH=C:\Program Files\PC Connectivity Solution\;C:\oraclexe\app\oracle\product\10.2.0\server\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Server 5.1\bin
+USERNAME=VISHAL
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 15 Stepping 13, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 Build 7600 
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 15 stepping 13, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3
+
+Memory: 4k page, physical 2088248k(1280032k free), swap 4176496k(2557768k free)
+
+vm_info: Java HotSpot(TM) Client VM (14.3-b01) for windows-x86 JRE (1.6.0_17-b04), built on Oct 11 2009 00:52:06 by "java_re" with MS VC++ 7.1
+
+time: Tue May 10 02:20:51 2011
+elapsed time: 0 seconds
+
